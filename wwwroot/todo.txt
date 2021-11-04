@@ -1,0 +1,37 @@
+about us:
+	content indentation (? not sure if needed)					waiting
+	(*1) 								DONE
+
+all side domains:
+	dl button that redirects to main page					(half)DONE
+	// need image from Axi						waiting
+	docs -> documentation						DONE
+	(*1) // no big main anim. on side domains //do it on aboutus 			DONE
+	logo redirects to main page						DONE
+	
+the wallet:
+	skeleton (img)							DONE
+	// baseview: new animation					
+	
+	
+docs -> documentation side domain: 
+	// wait for grapics							DONE
+
+career - > contributions:
+	empty side domain
+	// need infograpics // images text layout etc				waiting 
+	
+
+index/home:
+	Tile hover glass-shine effect						DONE
+
+
+NEW TODO: 	unifiedly: 	change logos
+			finalize menubar content // buttons
+			(still need dl button? - yes)
+			footer
+
+our partners -> x								DONE
+career -> contribution							DONE
+support redirects to: https://github.com/zkSNACKs/WalletWasabi/discussions/5185		DONE
+documentation -> support (kép)							NQ

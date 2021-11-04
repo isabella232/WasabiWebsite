@@ -1,0 +1,932 @@
+/*
+WASABI COLORS:
+green:      #72C800
+grey:       #D1D8D0
+lightblue:  #95B3D0
+darkblue1:  #004178
+darkblue2:  #04325F
+darkblue3:  #002647
+darkblue4:  #00101F
+*/
+
+@font-face {
+    font-family: "Objectivity";
+    src: url(../fonts/Objectivity-Regular.otf) format("opentype");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Objectivity";
+    src: url(../fonts/Objectivity-Light.otf) format("opentype");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Objectivity";
+    src: url(../fonts/Objectivity-Thin.otf) format("opentype");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Objectivity";
+    src: url(../fonts/Objectivity-Bold.otf) format("opentype");
+    font-weight: 800;
+}
+@keyframes slide-right{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 142px;
+    }
+}
+@keyframes point-down {
+    0% {
+        bottom: 40px;
+    }
+    60% {
+        bottom: 40px;
+    }
+    70% {
+        bottom: 20px;
+    }
+    80% {
+        bottom: 40px;
+    }
+    90% {
+        bottom: 20px;
+    }
+    100% {
+        bottom: 40px;
+    }
+}
+@keyframes glass-shine {
+    0% {
+        left: -20%;
+        opacity: 0;
+        width: 0;
+    }
+    10% {
+        left: -20%;
+        opacity: 0;
+        width: 0;
+    }
+    20% {
+        left: 20%;
+        opacity: 1;
+        width: 10%;
+    }
+    80% {
+        left: 85%;
+        opacity: 1;
+        width: 30%;
+    }
+    90% {
+        left: 140%;
+        opacity: 0;
+        width: 50%;
+    }
+    100%
+    {
+        left: 140%;
+        opacity: 0;
+        width: 100%;
+    }
+}
+.flap-bottom {
+    height: 50px;
+    width: calc(100% + 200px);
+    left: -200px;
+    position: inherit;
+    background: repeating-linear-gradient(45deg, black, transparent 100px);
+    animation: slide-right linear;
+    animation-direction: normal;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+body {
+    overflow-x: hidden;
+}
+
+img#wasabi-logo {
+    position: absolute;
+    top: 0vh;
+    left: 0;
+    height: 156px;
+    z-index: 3;
+    backdrop-filter: blur(8px);
+    padding: 50px;
+}
+
+img#wasabi-logo {
+    position: absolute;
+    top: 0vh;
+    left: 0;
+    height: 180px;
+    z-index: 3;
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    margin: 22px;
+}
+
+.download-row {
+    margin: 20px;
+    display: block;
+    width: 90%;
+    height: 70px;
+}
+
+.download-row div {
+    background-color: white;
+}
+
+.download-row > div {
+    border-radius: 14px;
+}
+
+.download-left {
+    width: calc(100% - 70px - 20px);
+    height: inherit;
+    float: left;
+    display: flex;
+}
+
+.download.icon {
+    margin: 8px;
+    margin-left: 10px;
+    float: left;
+    width: 55px;
+    height: 55px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.download-text {
+    vertical-align: middle;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    align-self: center;
+    font-size: 25px;
+    font-weight: 800;
+    font-family: 'Objectivity';
+    text-transform: uppercase;
+    color: #004178;
+    cursor: default;
+}
+
+.download-buttons-container {
+    z-index: 2;
+    padding: 30px 50px;
+    width: 510px;
+    bottom: 100px;
+    left: 10%;
+    position: absolute;
+    text-align: center;
+    height: fit-content;
+    backdrop-filter: blur(6px);
+    background-color: #ffffff60;
+}
+.download-buttons-container img {
+    filter: drop-shadow( 0px 2px 2px #00000077);
+}
+
+.download-button {
+    float: right;
+    height: 70px;
+    width: 70px;
+}
+
+a.mac-dl {
+    position: absolute;
+    width: 410px;
+    height: 77px;
+    left: 50px;
+    top: 105px;
+}
+a.win-dl {
+    position: absolute;
+    width: 410px;
+    height: 77px;
+    left: 50px;
+    top: 195px;
+}
+a.lin-dl {
+    position: absolute;
+    width: 410px;
+    height: 77px;
+    left: 50px;
+    top: 285px;
+}
+
+a.ubu-dl {
+    position: absolute;
+    width: 410px;
+    height: 77px;
+    left: 50px;
+    top: 375px;
+}
+
+.download-button img {
+    width: 25px;
+    top: 20px;
+    position: relative;
+}
+
+a.download-button {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    font-family: 'Objectivity';
+    font-weight: 700;
+    background-color: #00000010
+}
+a.download-button:hover {
+    transition: background-color, color 0.2s;
+    background-color: #ffffff10;
+    color: #97D234;
+}
+
+
+.header {
+    display: inline-block;
+    z-index: 1001;
+    position: absolute;
+    width: calc(100% - 64px);
+    height: 60px;
+}
+
+.header .left, .header .mid, .header .right {
+    flex: 1
+}
+
+.header .right {
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+}
+
+.logo-small {
+    margin: 0 6px;
+    width: 33px;
+    height: 33px;
+    top: 10px;
+    position: relative;
+    text-shadow: 0 0px 3px black;
+    opacity: 0.65;
+    transition: opacity 0.5s;
+}
+
+.logo-small img {
+    -webkit-filter: drop-shadow( 0px 0px 1px #00000077);
+    filter: drop-shadow( 0px 0px 1px #00000077);
+}
+
+a.logo-small:hover{
+    opacity: 1;
+}
+a.logo-small:hover img{  
+    -webkit-filter: drop-shadow( 0px 0px 2px #FFFFFF) brightness(2);
+    filter: drop-shadow( 0px 0px 2px #FFFFFF) brightness(2);
+    transition: all 0.25s;
+}
+
+.background {
+    position: relative;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: inherit;
+    background: linear-gradient(45deg, #e2e2e2, #4e5c6e);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.background video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.video-container {
+    position: relative;
+    z-index: 1;
+}
+
+.main {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-right {
+    display: inline-flex;
+    background-color: #FFFFFF95;
+    height: 100vh;
+    width: 450px;
+    position: fixed;
+    top: 0;
+    right: -386px;
+    backdrop-filter: blur(28px);
+    transition: backdrop-filter 0.5s, background-color 0.5s, right 0.8s;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 1000;
+}
+.menu-right:hover {
+    right: 0;
+}
+
+.menu-list a {
+    color: black !important;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Objectivity';
+}
+
+.menu-list a:hover {
+    color: white !important;
+    text-shadow: 0px 1px 10px #00000080;
+    transition: all 0.2s linear;
+}
+
+ul.menu-list {
+    align-self: center;
+    margin-bottom: 0;
+    padding-right: 18px;
+    margin-left: 25px;
+    list-style: none;
+}
+
+ul.menu-list > li {
+    padding: 15px 0;
+}
+
+.menu-right:hover .menu-icon {
+    filter: brightness(2) drop-shadow(0px 1px 10px #00000080);
+}
+.menu-icon {
+    width: 40px;
+    margin-left: 14px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    align-self: center;
+    cursor: default;
+    text-shadow: 0px 1px 3px black;
+    filter: brightness(0.1);
+    transition: filter 1s ease-in-out;
+}
+
+.scroll-arrow {
+    z-index: 2;
+    width: 80px;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 40px);
+    color: white;
+    text-shadow: 4px 0px 10px #00000088;
+    cursor: default;
+    animation-name: point-down;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    filter: drop-shadow(0px 2px 4px #00000055);
+    backdrop-filter: blur(6px);
+    padding: 15px;
+}
+
+.tiles-container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    column-count: 2;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, 50%);
+    grid-gap: 0;
+    padding-right: 64px;
+    background-color: #AAA;
+}
+.tile {
+    height: 30vw;
+    position: relative;
+    float: left;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tile h1 {text-transform: uppercase;
+    font-family: 'Objectivity';
+}
+
+.tile h3 {  
+    font-family: 'Objectivity';
+    font-weight: lighter;
+    font-size: 1.2em;
+}
+
+.content {
+    transition: all 1s;
+    font-family: 'Objectivity';
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 10px #00000080;
+    max-width: 45vw;
+}
+
+.blurfilter{
+    transition: all 0.6s ease-in-out;
+    position: relative;
+    top: 0;
+    left: -50vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tile:hover .blurfilter {
+    backdrop-filter: blur(3px);
+    background-color: #00000070;
+    left: 0;
+}
+.blurfilter:after {
+    content: '';
+    position: absolute;
+    background-color: #ffffff40;
+    top: 0px;
+    width: 10%;
+    height: 100%;
+    -webkit-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transform: skew(-55deg);
+    -ms-transform: skew(-55deg);
+    transform: skew(-30deg);
+    z-index: -1;
+    left: -20%;
+}
+
+.tile:hover .blurfilter::after{
+    animation-name: glass-shine;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    animation-duration: 10s;
+}
+
+.tile:hover .content {
+    opacity: 1;
+}
+
+.tile#tile1 {
+    background-image: url(../images/hero-on.jpg);
+}
+
+.tile#tile2 {
+    background-image: url(https://cdn.wallpapersafari.com/18/96/RayYH1.jpg);
+}
+
+.tile#tile3 {
+    background-image: url(https://humanwindow.com/wp-content/uploads/what-is-true-happiness-large.jpg);
+}
+
+.tile#tile4 {
+    background-image: url(https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eXxlbnwwfHwwfHw%3D&w=1000&q=80);
+}
+
+a, a:link, a:visited, a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.footer {
+    z-index: 0;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-top1 {
+    background-image: linear-gradient(to top, #004178 0%, #002647 98%, #000000 100%);
+    padding-top: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 280px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.footer-top2 {
+    color: #666666;
+    text-align: center;
+    font-size: 10px;
+    width: 100%;
+    height: 20px;
+    background-image: linear-gradient(to top, #000000 0%, #000000cc 60%, #D1D8D0 62%, #004178 64%, #004178 100%);
+    padding-top: 7px;
+}
+
+.menu-list a, a.text-light.p-1.mr-xl-3 {
+    position: relative;
+    font-family: 'Objectivity';
+    font-weight: 300;
+    font-stretch: extra-expanded;
+    font-variant-caps: petite-caps;
+    letter-spacing: 2px;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+.menu-list > li > a:hover, a.text-light.p-1.mr-xl-3:hover {
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+.menu-list a + ul li a{
+    padding-left: 5px;
+    font-size: 12px;
+    text-decoration: none !important;
+}
+.menu-list a + ul li {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    transition-delay: 0s;
+}
+.menu-list a:hover + ul li {
+    height: 2em;
+    transition-delay: 0.6s;
+}
+.menu-list a + ul:hover li {
+    height: 2em;
+    transition-delay: 0.6s;
+}
+
+a.text-light.p-1.mr-xl-3:hover:after {
+    width: calc(100% - 12px);
+    opacity: 1;
+}
+
+a.text-light.p-1.mr-xl-3:after {
+    content: " ";
+    height: 1px;
+    background-color: white;
+    width: 0;
+    position: absolute;
+    left: 6px;
+    bottom: 9px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.menu-list > li > a:hover:after {
+    width: calc(100% - 4px);
+    opacity: 1;
+}
+.menu-list > li > a {
+    padding-bottom: 5px;
+}
+.menu-list a:after {
+    content: " ";
+    height: 1px;
+    background-color: white;
+    width: 0;
+    position: absolute;
+    left: 0px;
+    bottom: 3px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+h1.title {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    font-family: 'Objectivity';
+    top: 10vh;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 1px 1px 7px #00000040;
+}
+
+.border-image {
+    height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    max-height: 40vh;
+}
+#border-image0 {
+    background-image: url(https://www.slalom.com/sites/default/files/2020-07/city-of-LA-case-study-Header-3010x1200_0.jpg);
+    height: 70vh;
+    max-height: unset;
+}
+#border-image1 {
+    background-image: url(https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eXxlbnwwfHwwfHw%3D&w=1000&q=80);
+}
+#border-image2 {
+    background-image: url(https://cdn.wallpapersafari.com/18/96/RayYH1.jpg)
+}
+#border-image3 {
+    background-image: url(https://commonslibrary.parliament.uk/content/uploads/2018/02/The_City_London-scaled.jpg)
+}
+
+h3.title {
+    font-family: 'Objectivity';
+    font-weight: 500;
+}
+
+.flap-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    background: linear-gradient(45deg, #04335d, #031021);
+    padding-top: 30vh;
+}
+.flap {
+    width: calc(60% + 40px);
+    text-align: justify;
+    padding: 25px 40px;
+    margin-bottom: 30vh;
+    background: white;
+}
+.flap.left {
+    padding-left: 90px;
+}
+
+.flap.right {
+    padding-right: 90px;
+    margin-left: calc(40% - 40px);
+}
+.right h3.title {
+    text-align: right;
+}
+
+.docs-content {
+    position: absolute;
+    top: 28vh;
+    left: calc(50vw - 310px);
+    z-index: 2;
+    display: grid;
+    text-align: center;
+}
+
+.docs-content a {
+    color: #012743;
+}
+
+.docs-image {
+    background-image: url(../images/SVG/wasabi-logo-filled.svg);
+    height: 350px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a.docs-text {
+    font-family: 'Objectivity';
+    text-transform: uppercase;
+    text-decoration: underline 2px #23B265;
+    font-size: 30px;
+    font-weight: 600;
+    text-underline-offset: 5px;
+}
+a.old-docs-text {
+    font-family: 'Objectivity';
+    font-weight: 400;
+    font-size: 18px;
+    width: 320px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media all and (max-width: 1000px) { 
+    h1.title {
+        top: 25vh;
+        font-size: 50px;
+    }
+
+    .content h1 {
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+    .content h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .header .right {
+        right: auto;
+        position: absolute;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, 0);
+    }
+    .header {
+        width: 100%;
+    }
+    .tiles-container {
+        column-count: 1;
+        grid-template-columns: repeat(auto-fit, 100%);
+    }
+    .tile {
+        height: 60vw;
+    }
+    .tile .blurfilter{  
+        opacity: 1;
+        left: 0;
+        backdrop-filter: blur(3px);
+        background-color: #00000070;
+    }
+    .tile .content {
+        opacity: 1;
+    }
+
+    .content {
+        max-width: 90vw;
+    }
+}
+
+.content-container {
+    z-index: 2;
+    position: relative;
+}
+
+.content-container > div {
+    box-shadow: inset 0 10px 15px #00000010;
+}
+
+.content-block {
+    font-family: 'Objectivity';
+    padding: 30px 10em;
+    text-align: justify;
+    font-weight: 300;
+    background-color: white;
+}
+
+h3.content-title {
+    font-family: 'Objectivity';
+}
+
+
+@media all and (max-width: 1000px) { 
+    h1.title {
+        top: 25vh;
+        font-size: 50px;
+    }
+
+    .content h1 {
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+    .content h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .header .right {
+        right: auto;
+        position: absolute;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, 0);
+    }
+    .header {
+        width: 100%;
+    }
+    .tiles-container {
+        column-count: 1;
+        grid-template-columns: repeat(auto-fit, 100%);
+        padding-right: 0;
+    }
+    .tile {
+        height: 60vw;
+    }
+    .tile .blurfilter{  
+        opacity: 1;
+        left: 0;
+        backdrop-filter: blur(3px);
+        background-color: #00000070;
+    }
+    .tile .content {
+        opacity: 1;
+    }
+
+    .content {
+        max-width: 90vw;
+    }
+}
+
+@media all and (max-width: 600px) {
+    @keyframes point-down {
+        0% {
+            bottom: 20px;
+        }
+        60% {
+            bottom: 20px;
+        }
+        70% {
+            bottom: 5px;
+        }
+        80% {
+            bottom: 20px;
+        }
+        90% {
+            bottom: 5px;
+        }
+        100% {
+            bottom: 20px;
+        }
+    }
+
+    h1.title {
+        top: 170px;
+        font-size: 50px;
+    }
+
+    .menu-right {
+        display: none;
+        width: 433px;
+        right: -386px;
+    }
+    .menu-right:hover {
+        right: -197px;
+    }
+    ul.menu-list {
+        padding-left: 15px;
+        margin-left: 0;
+    }
+    .menu-icon { 
+        width: 20px;
+    }
+
+    img#wasabi-logo {
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: calc(100%);
+        padding: 50px 80px 16px 80px;
+        margin: 0;
+    }
+    .logo-small {
+        width: 20px;
+    }
+    .download-buttons-container {
+        width: 280px;
+        margin-right: auto;
+        margin-left: auto;
+        left: calc(50vw - 140px);
+        padding: 10px 30px;
+    }
+
+    a.mac-dl {
+        position: absolute;
+        width: 220px;
+        height: 41px;
+        left: 30px;
+        top: 10px;
+    }
+    a.win-dl {
+        position: absolute;
+        width: 220px;
+        height: 43px;
+        left: 31px;
+        top: 58px;
+    }
+    a.lin-dl {
+        position: absolute;
+        width: 220px;
+        height: 42px;
+        left: 31px;
+        top: 106px;
+    }
+    
+    a.ubu-dl {
+        position: absolute;
+        width: 220px;
+        height: 42px;
+        left: 31px;
+        top: 155px;
+    }
+
+
+}
